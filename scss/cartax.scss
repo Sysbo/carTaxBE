@@ -1,0 +1,93 @@
+$lightBlue: rgb(241,249,255);
+$darkBlue: darken($lightBlue, 5%);
+$primary: rgb(110,72,170);
+
+@import "../assets/bootstrap/scss/bootstrap";
+
+body{
+    background-color: $lightBlue !important;
+}
+
+.calc-header h1{
+    font-size: 2rem;
+}
+
+.step{
+    background-color: #fff;
+    border: solid 1px $darkBlue;
+    border-radius: 500px;
+    padding: 1rem 3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    transition: opacity 1000ms;
+    &:hover {
+        border: solid 1px darken($darkBlue, 50%);
+        transition: border 500ms ease-in-out;
+      }
+}
+
+.step .step-title{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.step .step-extra{
+    line-height: 1;
+    font-size: 0.8rem;
+}
+
+.step .step-alert{
+    margin: 1rem auto 0 auto;
+    padding: 0.8rem;
+    border-radius: 50px;
+    border: solid 1px $darkBlue;
+    background-color: $lightBlue;
+    width: 90%;
+}
+
+.hidden-step{
+    display: none;
+}
+
+.tax-result{
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+    @extend .shadow-sm;
+}
+
+.tax-receipt-header{
+    padding: 1rem;
+}
+
+.tax-receipt-body{
+    border: dotted $lightBlue;
+    border-width: 6px 0 0 0;
+    padding: 1rem;
+}
+
+.tax-receipt-footer{
+    @extend .tax-receipt-body;
+}
+
+.saved-vehicle-body{
+    padding: 1rem;
+}
+
+.saved-vehicle-body.dotted-border{
+    border: dotted $lightBlue;
+    border-width: 6px 0 0 0;
+}
+
+.saved-vehicle-data{
+    padding-bottom: 1rem;
+}
+
+.saved-vehicle-button{
+    color: $primary !important;
+    font-weight: 600;
+}
+
+.modal-backdrop {
+    position:unset !important;
+}
+
